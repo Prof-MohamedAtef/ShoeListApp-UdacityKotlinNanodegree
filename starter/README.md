@@ -18,11 +18,11 @@ Open the starter project in Android Studio
 
 1. Open the starter project in Android Studio
 
-2. Add the navigation libraries to the app build.gradle file
+2. Add the  libraries to the app build.gradle file
 
 3. Add the safe-arg plugin to the main and app build.gradle file
 
-4. Create a new navigation xml file
+4. Create a new  xml file
 
 5. Create a new Login destination.
 
@@ -36,13 +36,13 @@ Open the starter project in Android Studio
 
    * A new layout
    * At least 2 textviews
-   * A navigation button with actions to navigate to the instructions screen
+   * A  button with actions to navigate to the instructions screen
 
 7. Create a new Instruction destination that includes:
 
    * A new layout
    * At least 2 textviews
-   * A navigation button with actions to navigate to the shoe list screen
+   * A  button with actions to navigate to the shoe list screen
 
 8. Create a class that extends ViewModel
 

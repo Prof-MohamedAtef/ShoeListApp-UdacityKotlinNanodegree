@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login with an existing account</string>
+    <string name="signup">New! Create an account</string>
+    <string name="textLarge">"Hi! This is the Shoe App in The Advanced Kotlin Nanodegree Program. This App contain 5 screens. Login screen, Welcome Screen, Instruction Screen, The Shoe List Screen, and the Details Screen. We Will use MVVM for the app architecture. "</string>
+    <string name="instructionOne">You should Login to first in order to View and Add More shoes.</string>
+    <string name="instructionTwo">Use email and password or create an account to login to the app and use it smoothly. Logout from the app if you want to exit. Set Shoe Name, Company, Shoe Size, and Description in the Details screen.</string>
+    <string name="instructions">Instructions</string>
+    <string name="welcome">Welcome</string>
+    <string name="logout">Logout</string>
+    <string name="addShoe">Add Shoe</string>
 </resources>
