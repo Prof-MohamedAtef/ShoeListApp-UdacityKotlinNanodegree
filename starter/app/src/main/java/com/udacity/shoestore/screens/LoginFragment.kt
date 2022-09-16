@@ -13,8 +13,6 @@ import com.udacity.shoestore.viewmodels.SharedViewModel
 
 class LoginFragment : Fragment() {
 
-    private lateinit var viewModel: SharedViewModel
-
     private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(

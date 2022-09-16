@@ -1,0 +1,154 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="MyShoe"
+            type="com.udacity.shoestore.models.Shoe" />
+        <variable
+            name="viewmodel"
+            type="com.udacity.shoestore.viewmodels.SharedViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_shoe_name"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Name"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etShoeName"
+                app:layout_constraintEnd_toStartOf="@+id/etShoeName"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_shoe_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etShoeDesc"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_shoe_size"
+                app:layout_constraintStart_toStartOf="@+id/lbl_shoe_size" />
+
+            <TextView
+                android:id="@+id/lbl_shoe_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etShoeSize"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_shoe_name"
+                app:layout_constraintStart_toStartOf="@+id/lbl_shoe_name" />
+
+            <TextView
+                android:id="@+id/lbl_shoe_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Company"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etShoeCompany"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_shoe_company"
+                app:layout_constraintStart_toStartOf="@+id/lbl_shoe_company" />
+
+            <EditText
+                android:id="@+id/etShoeSize"
+                android:textColor="@color/colorAccent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="size"
+                android:inputType="number|textPersonName|numberDecimal"
+
+                app:layout_constraintBottom_toTopOf="@+id/etShoeCompany"
+                app:layout_constraintEnd_toEndOf="@+id/etShoeName"
+                app:layout_constraintStart_toStartOf="@+id/etShoeName"
+                app:layout_constraintTop_toBottomOf="@+id/etShoeName" />
+            <!--        android:text="@={newShoe.size}"-->
+            <EditText
+                android:id="@+id/etShoeName"
+                android:textColor="@color/colorAccent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:hint="name"
+                android:inputType="textPersonName"
+
+                app:layout_constraintBottom_toTopOf="@+id/etShoeSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lbl_shoe_name"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--        android:text="@={newShoe.name}"-->
+            <EditText
+                android:id="@+id/etShoeCompany"
+                android:textColor="@color/colorAccent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="company"
+                android:inputType="textPersonName"
+
+                app:layout_constraintBottom_toTopOf="@+id/etShoeDesc"
+                app:layout_constraintEnd_toEndOf="@+id/etShoeSize"
+                app:layout_constraintStart_toStartOf="@+id/etShoeSize"
+                app:layout_constraintTop_toBottomOf="@+id/etShoeSize" />
+            <!--        android:text="@={newShoe.company}"-->
+            <EditText
+                android:id="@+id/etShoeDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="description"
+                android:textColor="@color/colorAccent"
+                android:inputType="textPersonName"
+
+                app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                app:layout_constraintEnd_toEndOf="@+id/etShoeCompany"
+                app:layout_constraintStart_toStartOf="@+id/etShoeCompany"
+                app:layout_constraintTop_toBottomOf="@+id/etShoeCompany" />
+            <!--        android:text="@={newShoe.description}"-->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="360dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddShoe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="save"
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnCancel"
+                app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="cancel"
+                android:id="@+id/btnCancel"
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAddShoe"
+                app:layout_constraintEnd_toStartOf="@+id/btnAddShoe"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnAddShoe" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

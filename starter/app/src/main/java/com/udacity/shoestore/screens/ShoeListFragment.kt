@@ -46,20 +46,11 @@ class ShoeListFragment:Fragment() {
             }
         })
 
-
         binding.fab.setOnClickListener { view ->
             view.findNavController()
                 .navigate(ShoeListFragmentDirections.actionShoeListFragmentToDetailsFragment())
         }
 
-        viewModel.navigateToList.observe(viewLifecycleOwner, Observer { isNavigated->
-            isNavigated?.let {
-                if (isNavigated){
-                    findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToDetailsFragment())
-                    viewModel.doneNavigatingToDetail()
-                }
-            }
-        })
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -75,7 +66,6 @@ class ShoeListFragment:Fragment() {
                 findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
             }
         }
-
         return super.onOptionsItemSelected(item)
     }
 }

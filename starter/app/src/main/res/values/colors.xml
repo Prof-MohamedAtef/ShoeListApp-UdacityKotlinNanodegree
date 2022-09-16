@@ -7,5 +7,6 @@
 
     <color name="accent_500_2__">#CE0000</color>
     <color name="theme_accent2">#bc477b</color>
+    <color name="transparent">#00FFFFFF</color>
 
 </resources>

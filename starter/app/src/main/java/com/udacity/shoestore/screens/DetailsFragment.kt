@@ -8,12 +8,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentDetailBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodels.SharedViewModel
+
 
 class DetailsFragment:Fragment() {
     lateinit var binding: FragmentDetailBinding
@@ -27,8 +27,6 @@ class DetailsFragment:Fragment() {
         binding=DataBindingUtil.inflate(inflater, R.layout.fragment_detail,container,false)
         binding.viewmodel=viewModel
         binding.myShoe=Shoe()
-
-
 
         binding.btnAddShoe.setOnClickListener { view: View ->
             if(validateData()){
@@ -46,12 +44,10 @@ class DetailsFragment:Fragment() {
                 viewModel.doneNavigatingToDetail()
             }
         })
-
         return binding.root
     }
 
     private fun saveShoeDetails() {
-//        val bindingData=binding.myShoe
         val name=binding.etShoeName.text.toString()
         val size= binding.etShoeSize.text.toString()
         val company=binding.etShoeDesc.text.toString()
