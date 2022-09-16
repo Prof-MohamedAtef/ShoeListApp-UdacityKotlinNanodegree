@@ -11,4 +11,10 @@
     <string name="welcome">Welcome</string>
     <string name="logout">Logout</string>
     <string name="addShoe">Add Shoe</string>
+    <string name="name">Name</string>
+    <string name="Description">Description</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>

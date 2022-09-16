@@ -10,6 +10,9 @@
             type="com.udacity.shoestore.viewmodels.SharedViewModel" />
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:text="@string/name"
             app:layout_constraintBaseline_toBaselineOf="@+id/etShoeName"
             app:layout_constraintEnd_toStartOf="@+id/etShoeName"
             app:layout_constraintStart_toStartOf="parent" />
@@ -30,7 +33,7 @@
             android:id="@+id/lbl_shoe_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="@string/Description"
             app:layout_constraintBaseline_toBaselineOf="@+id/etShoeDesc"
             app:layout_constraintEnd_toEndOf="@+id/lbl_shoe_size"
             app:layout_constraintStart_toStartOf="@+id/lbl_shoe_size" />
@@ -39,7 +42,7 @@
             android:id="@+id/lbl_shoe_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Size"
+            android:text="@string/size"
             app:layout_constraintBaseline_toBaselineOf="@+id/etShoeSize"
             app:layout_constraintEnd_toEndOf="@+id/lbl_shoe_name"
             app:layout_constraintStart_toStartOf="@+id/lbl_shoe_name" />
@@ -49,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Company"
+            android:text="@string/company"
             app:layout_constraintBaseline_toBaselineOf="@+id/etShoeCompany"
             app:layout_constraintEnd_toEndOf="@+id/lbl_shoe_company"
             app:layout_constraintStart_toStartOf="@+id/lbl_shoe_company" />
@@ -60,9 +63,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="size"
+            android:hint="@string/size"
             android:inputType="number|textPersonName|numberDecimal"
-
+            android:text="@{String.valueOf(MyShoe.size)}"
             app:layout_constraintBottom_toTopOf="@+id/etShoeCompany"
             app:layout_constraintEnd_toEndOf="@+id/etShoeName"
             app:layout_constraintStart_toStartOf="@+id/etShoeName"
@@ -76,8 +79,9 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+            android:text="@{MyShoe.name}"
             android:ems="10"
-            android:hint="name"
+            android:hint="@string/name"
             android:inputType="textPersonName"
 
             app:layout_constraintBottom_toTopOf="@+id/etShoeSize"
@@ -91,7 +95,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="company"
+            android:text="@{MyShoe.company}"
+            android:hint="@string/company"
             android:inputType="textPersonName"
 
             app:layout_constraintBottom_toTopOf="@+id/etShoeDesc"
@@ -104,10 +109,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="description"
+            android:hint="@string/Description"
             android:textColor="@color/colorAccent"
             android:inputType="textPersonName"
-
+            android:text="@{MyShoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toEndOf="@+id/etShoeCompany"
             app:layout_constraintStart_toStartOf="@+id/etShoeCompany"
@@ -126,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:text="save"
+            android:text="@string/save"
             style="@style/Widget.AppCompat.Button.Colored"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -138,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="cancel"
+            android:text="@string/cancel"
             android:id="@+id/btnCancel"
             style="@style/Widget.AppCompat.Button.Colored"
             app:layout_constraintBottom_toBottomOf="@+id/btnAddShoe"
@@ -148,4 +153,5 @@
             app:layout_constraintTop_toTopOf="@+id/btnAddShoe" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
