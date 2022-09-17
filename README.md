@@ -1,52 +1,24 @@
-# README Template
+# My ShoeList App - First project on Android Kotlin Nanodegree
 
-Below is a template provided for use when building your README file for students.
+## This app depend on One single activity architecture.
 
-# Project Title
+### Screens in the project are built using Navigation Components.
 
-Project description goes here.
+# This App consists of the following screens:
+1. LoginFragment
+2. WelcomeFragment
+3. Instruction Fragment
+4. ShoeListFragment
+5. DetailsFragment
 
-## Getting Started
+### This app depends on a navigation layout and data binding.
 
-Instructions for how to get a copy of the project running on your local machine.
+App has successfully passed Udacity review.
+### These are results of Udacity's review:
 
-### Dependencies
+![image](https://user-images.githubusercontent.com/16711483/190857036-8b05ea55-9ace-4772-9e88-899819738fef.png)
+![image](https://user-images.githubusercontent.com/16711483/190857433-32ea60f1-77f4-405e-80bc-0ba180477db5.png)
+![image](https://user-images.githubusercontent.com/16711483/190857495-45c50767-b1cd-45fe-a81e-c65e217f76af.png)
+![image](https://user-images.githubusercontent.com/16711483/190857512-89d2c1a2-9b97-4339-bb43-2fa937bcea29.png)
 
-```
-Examples here
-```
 
-### Installation
-
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
-
-## License
