@@ -52,7 +52,11 @@ class DetailsFragment:Fragment() {
         val size= binding.etShoeSize.text.toString()
         val company=binding.etShoeDesc.text.toString()
         val description=binding.etShoeCompany.text.toString()
-        viewModel.onSaveShoeData(name,company, size.toDouble() ,description)
+        if(size.indexOf('.', size.indexOf('.') + 1) != -1){
+            binding.etShoeSize.setError("multiple dots!")
+        }else{
+            viewModel.onSaveShoeData(name,company, size.toDouble() ,description)
+        }
     }
 
     private fun validateData(): Boolean {
