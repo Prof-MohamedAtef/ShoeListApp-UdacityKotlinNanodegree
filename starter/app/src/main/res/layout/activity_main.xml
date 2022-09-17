@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--layout xml tag is used for data binding purpose-->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="SharedViewModel"
             type="com.udacity.shoestore.viewmodels.SharedViewModel" />
     </data>
+    <!--    I used RelativeLayout as it enable putting both the AppBarLayout
+            above the Linear layout which included the fragment layout-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <!--        AppBarLayout is always used to
+                include the Toolbar Layout-->
         <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/appBar"
                 android:layout_width="match_parent"
@@ -29,12 +33,17 @@
                     app:popupTheme="@style/AppTheme.PopupOverlay"/>
             </com.google.android.material.appbar.AppBarLayout>
 
+        <!--        Linear Layout here is beneficial as i do not want
+            to include too many child views inside it.
+            I was ought to use the ConstraintLayout instead of LinearLayout
+            if i have to many child views, but in this case, i have only the fragment view.
+
+             -->
         <LinearLayout
             android:layout_below="@id/appBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <fragment
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:id="@+id/nav_host_fragment"
